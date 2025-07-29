@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Codem's DnD Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Splash Screen -->
+  <div id="splash">
+    <video
+      id="introVid"
+      autoplay
+      muted
+      playsinline
+      disablePictureInPicture
+      controlsList="nodownload nofullscreen noremoteplayback"
+    >
+      <source src="assets/dragon_intro.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Main Content -->
+  <div id="main-content" style="display: none;">
+    <h1>Codem's DnD Portal</h1>
+    <p>Select your path, adventurer:</p>
+
+    <div class="button-container">
+      <a href="https://www.owlbear.rodeo/room/bWknXcm4w6q6/TheBraveGoose" class="dnd-button" target="_blank">🗡️ Enter Encounters</a>
+      <a href="https://www.dndbeyond.com/characters" class="dnd-button" target="_blank">📖 Character Sheet</a>
+      <a href="https://www.dndbeyond.com/campaigns/join/6872386728138228" class="dnd-button" target="_blank">🎯 Join Campaign</a>
+    </div>
+  </div>
+
+  <script>
+    const video = document.getElementById("introVid");
+
+    video.addEventListener("pause", () => video.play()); // Force play if paused
+    video.addEventListener("contextmenu", e => e.preventDefault()); // Disable right-click
+    video.addEventListener("ended", () => {
+      document.getElementById("splash").style.display = "none";
+      document.getElementById("main-content").style.display = "block";
+    });
+  </script>
+</body>
+</html>
