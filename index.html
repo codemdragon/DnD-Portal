@@ -30,7 +30,9 @@
       <a href="https://www.owlbear.rodeo/room/bWknXcm4w6q6/TheBraveGoose" class="dnd-button" target="_blank">🗡️ Enter Encounters</a>
       <a href="https://www.dndbeyond.com/characters" class="dnd-button" target="_blank">📖 Character Sheet</a>
       <a href="https://www.dndbeyond.com/campaigns/join/6872386728138228" class="dnd-button" target="_blank">🎯 Join Campaign</a>
-      <a href="https://alchemy-jade.vercel.app" class="dnd-button" target="_blank"> 🧪 Enhanced Potion Brewer</a>
+      <a href="https://alchemy-jade.vercel.app" class="dnd-button" target="_blank">🧪 Enhanced Potion Brewer</a>
+      <!-- New Beastiary Button -->
+      <a href="#" class="dnd-button" id="beastiary-btn">🐉 Beastiary</a>
     </div>
   </div>
 
@@ -43,7 +45,19 @@
       document.getElementById("splash").style.display = "none";
       document.getElementById("main-content").style.display = "block";
     });
+
+    // Beastiary password protection
+    const beastiaryBtn = document.getElementById("beastiary-btn");
+    beastiaryBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const password = prompt("Speak the secret word to unlock the Beastiary:");
+      
+      if (password === "Ferron") {
+        window.open("https://bestiary-ten.vercel.app", "_blank");
+      } else {
+        alert("Incorrect password! The ancient tome remains sealed.");
+      }
+    });
   </script>
 </body>
 </html>
-
