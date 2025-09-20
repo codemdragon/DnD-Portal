@@ -44,6 +44,8 @@ video {
   text-decoration: none;
   transition: 0.3s ease;
   box-shadow: 0 0 10px #900;
+  cursor: pointer;
+  display: inline-block;
 }
 
 .dnd-button:hover {
@@ -53,7 +55,6 @@ video {
 }
 
 #beastiary-btn {
-  cursor: pointer;
   background: #2c3e50; /* Different color for password-protected button */
   box-shadow: 0 0 10px #1a2530;
 }
@@ -61,4 +62,14 @@ video {
 #beastiary-btn:hover {
   background: #34495e;
   box-shadow: 0 0 20px #2c3e50;
+}
+
+#campaign-btn {
+  background: #4b0082; /* Different color for campaign button */
+  box-shadow: 0 0 10px #2a0049;
+}
+
+#campaign-btn:hover {
+  background: #5e00a3;
+  box-shadow: 0 0 20px #4b0082;
 }
